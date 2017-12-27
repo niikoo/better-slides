@@ -1,0 +1,31 @@
+{
+	"name": "Better Slides",
+	"short_name": "Better Slides",
+	"description": "Automatic window moving with multiple monitors and speakers notes.",
+	"version": "1.0",
+	"permissions": [
+		"activeTab",
+		"https://docs.google.com/presentation/d/*",
+		"tabs",
+		"system.display"
+	],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"browser_action": {
+		"default_title": "Start presentation"
+	},
+	"content_scripts": [
+	{
+		"matches": ["https://docs.google.com/presentation/d/*/edit*"],
+		"js": ["content-edit.js"]
+	},{
+		"matches": ["https://docs.google.com/presentation/d/*/present*"],
+		"js": ["content-present.js"]
+	}],
+	"web_accessible_resources": [
+		"toinject-openSpeakers.js"
+	],
+	"manifest_version": 2
+}
