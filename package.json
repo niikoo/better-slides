@@ -1,23 +1,23 @@
 {
-  "name": "better-slides",
-  "version": "1.0.0",
-  "description": "Better slides provides a better way to present Google Slides",
-  "main": "background.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/niikoo/better-slides.git"
-  },
-  "author": "niikoo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/niikoo/better-slides/issues"
-  },
-  "homepage": "https://github.com/niikoo/better-slides#readme",
-  "devDependencies": {
-    "@types/chrome": "0.0.63",
-    "typescript": "^2.8.1"
-  }
+    "name": "better-slides",
+    "version": "1.0.2",
+    "description": "Better slides provides a better way to present Google Slides",
+    "main": "background.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/niikoo/better-slides.git"
+    },
+    "author": "niikoo & Stornitz",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/niikoo/better-slides/issues"
+    },
+    "homepage": "https://github.com/niikoo/better-slides#readme",
+    "devDependencies": {
+        "@types/chrome": "0.0.63",
+        "typescript": "^2.8.1"
+    }
 }
