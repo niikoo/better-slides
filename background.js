@@ -1,7 +1,7 @@
 // Constants
 const UPDATE_LAYOUT_DELAY = 2000;
-const PRESENT_REGEX = /^https:\/\/docs\.google\.com\/presentation\/d\/[\w\_\-]+\/present(\?.*)?$/g;
-const EDIT_REGEX = /^https:\/\/docs\.google\.com\/presentation\/d\/[\w\_\-]+\/edit(\?.*)?$/g;
+const PRESENT_REGEX = /^https:\/\/docs\.google\.com\/presentation\/d\/[\w\_\-]+\/present(.*)?$/g;
+const EDIT_REGEX = /^https:\/\/docs\.google\.com\/presentation\/d\/[\w\_\-]+\/edit(.*)?$/g;
 
 // Variables
 // True if there is a dual screen (or more)

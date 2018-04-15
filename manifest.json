@@ -3,7 +3,7 @@
     "name": "Better Slides",
     "short_name": "BetterSlides",
     "description": "Automatic window moving with multiple monitors and speakers notes.",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "permissions": [
         "activeTab",
         "https://docs.google.com/presentation/d/*",

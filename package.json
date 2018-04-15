@@ -1,6 +1,6 @@
 {
     "name": "better-slides",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Better slides provides a better way to present Google Slides™",
     "main": "background.js",
     "scripts": {
