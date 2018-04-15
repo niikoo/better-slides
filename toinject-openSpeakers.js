@@ -1,9 +1,10 @@
-// On créé un event
+// Create event
 var keyPressEvent = document.createEvent("Event");
 keyPressEvent.initEvent("keydown", true, true);
-// Appui sur la touche S
+// Keypress s
 keyPressEvent.keyCode = 83;
-// On envoi l'event	
+keyPressEvent.which = 's';
+// Dispatch event
 document.dispatchEvent(keyPressEvent);
 
-console.log("Starting Speakers Notes...")
+console.log('Starting Speakers Notes...');

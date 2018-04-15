@@ -166,6 +166,11 @@ function onTabRemoved(tabId, removeInfo) {
     if (removeInfo.windowId == speakersWindowId) {
         console.log('It was the speakersWindowId');
         moveAndState(slideWindowId, primary, "normal");
+        chrome.tabs.get(slideTabId, function(tab) {
+            chrome.tabs.update(slideTabId, {
+                url: tab.url.replace('presentation', 'PRESENTATION').replace("present", "edit").replace("PRESENTATION", "presentation")
+            });
+        });
         speakersWindowId = null;
         speakersClosed = true;
     } else if (removeInfo.windowId == slideWindowId) {
