@@ -1,4 +1,4 @@
-// Constantes
+// Constants
 const UPDATE_LAYOUT_DELAY = 2000;
 const PRESENT_REGEX = /^https:\/\/docs\.google\.com\/presentation\/d\/[0-9A-z_]+\/present(\?.*)?$/g;
 const EDIT_REGEX = /^https:\/\/docs\.google\.com\/presentation\/d\/[0-9A-z_]+\/edit(\?.*)?$/g;
@@ -102,10 +102,14 @@ function getLayoutWorkArea(layouts) {
     primary = getPrimary(layouts);
 
     if (doubleScreen) {
+        // @ts-ignore
         i = 0;
+        // @ts-ignore
         while (layouts[i].id == primary.id) {
+            // @ts-ignore
             i++
         }
+        // @ts-ignore
         secondary = layouts[i].workArea
     }
     updateLayout();
@@ -113,6 +117,7 @@ function getLayoutWorkArea(layouts) {
 
 // Retrieves the information on the screens
 function getLayout() {
+    // @ts-ignore
     chrome.system.display.getInfo(function(displayLayouts) {
         getLayoutWorkArea(displayLayouts);
     });
@@ -124,7 +129,9 @@ function startLayoutUpdater() {
     getLayout();
 
     // Retrieves the information on the screens during an update
+    // @ts-ignore
     chrome.system.display.onDisplayChanged.removeListener(getLayout);
+    // @ts-ignore
     chrome.system.display.onDisplayChanged.addListener(getLayout);
 }
 
@@ -155,11 +162,15 @@ function onTabUpdated(tabId, changeInfo, tab) {
 
 // When a tab is closed
 function onTabRemoved(tabId, removeInfo) {
+    console.log('Tab removed; tabId', tabId, 'removeInfo:', removeInfo);
     if (removeInfo.windowId == speakersWindowId) {
+        console.log('It was the speakersWindowId');
+        moveAndState(slideWindowId, primary, "normal");
         speakersWindowId = null;
         speakersClosed = true;
     } else if (removeInfo.windowId == slideWindowId) {
         // Quit Slides
+        console.log('It was the slide window id');
         slideWindowId = null;
         slideTabId = null;
         actualSlideTitle = null;

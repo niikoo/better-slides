@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "typeRoots": [
+            "/node_modules/@types"
+        ],
+        "types": [
+            "chrome"
+        ]
+    }
+}
